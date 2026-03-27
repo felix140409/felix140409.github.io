@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Crypto Miner - Jeu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #0ff;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 50px;
+      font-size: 3em;
+    }
+    #score {
+      margin-top: 20px;
+      font-size: 1.5em;
+    }
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 20px;
+      color: #111;
+      background: #0ff;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #0cc;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💎 Crypto Miner</h1>
+  <p>Clique pour miner des cryptos et devenir riche !</p>
+  <button id="clicker">Miner 💰</button>
+  <p id="score">0 coins</p>
+
+  <script>
+    let score = 0;
+    const clicker = document.getElementById("clicker");
+    const scoreDisplay = document.getElementById("score");
+
+    clicker.addEventListener("click", () => {
+      score += 1;
+      scoreDisplay.textContent = score + " coins";
+    });
+  </script>
+
+</body>
+</html>
